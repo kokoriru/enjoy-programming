@@ -6,8 +6,6 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Code</th>
-      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +14,6 @@
     <% @ps.each do |p| %>
       <tr>
         <td><%= p.title %></td>
-        <td><%= p.code %></td>
-        <td><%= p.description %></td>
         <td><%= link_to 'Show', p %></td>
         <td><%= link_to 'Edit', edit_p_path(p) %></td>
         <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>

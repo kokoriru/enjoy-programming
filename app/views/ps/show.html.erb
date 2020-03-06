@@ -6,13 +6,13 @@
 </p>
 
 <p>
-  <strong>Code:</strong>
-  <%= @p.code %>
+  <strong>Description:</strong>
+  <%= simple_format(h(@p.description)) %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @p.description %>
+  <strong>Code:</strong>
+  <%= simple_format(h(@p.code)) %>
 </p>
 
 <%= link_to 'Edit', edit_p_path(@p) %> |
