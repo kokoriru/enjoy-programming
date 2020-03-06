@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @p.title %>
-</p>
+<div class='show_label'>
+  <p>
+    <strong>Title:</strong>
+    <%= @p.title %>
+  </p>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= simple_format(h(@p.description)) %>
-</p>
+<div class='show_label'>
+  <p>
+    <strong>Description:</strong>
+    <%= simple_format(h(@p.description)) %>
+  </p>
+</div>
 
-<p>
-  <strong>Code:</strong>
-  <%= simple_format(h(@p.code)) %>
-</p>
+<div class='show_label'>
+  <p>
+    <strong>Code:</strong>
+    <%= simple_format(h(@p.code)) %>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_p_path(@p) %> |
 <%= link_to 'Back', ps_path %>

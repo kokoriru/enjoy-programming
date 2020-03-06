@@ -5,10 +5,16 @@
 input {
   width: 60%;
   height: 2em;
+  margin-bottom: 1em;
 }
 
 textarea {
   width: 60%;
   height: 25em;
   line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+.show_label {
+  padding-bottom: 1em;
 }
