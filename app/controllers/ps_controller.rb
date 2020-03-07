@@ -68,6 +68,6 @@ class PsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def p_params
-    params.require(:p).permit(:title, :code, :description)
+    params.require(:p).permit(:title, :code, :description, :official_url, :exercise_url)
   end
 end
