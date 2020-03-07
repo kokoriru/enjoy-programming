@@ -1,47 +1,47 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class PsTest < ApplicationSystemTestCase
   setup do
     @p = ps(:one)
   end
 
-  test "visiting the index" do
+  test 'visiting the index' do
     visit ps_url
-    assert_selector "h1", text: "Ps"
+    assert_selector 'h1', text: 'Ps'
   end
 
-  test "creating a P" do
+  test 'creating a P' do
     visit ps_url
-    click_on "New P"
+    click_on 'New P'
 
-    fill_in "Code", with: @p.code
-    fill_in "Description", with: @p.description
-    fill_in "Title", with: @p.title
-    click_on "Create P"
+    fill_in 'Code', with: @p.code
+    fill_in 'Description', with: @p.description
+    fill_in 'Title', with: @p.title
+    click_on 'Create P'
 
-    assert_text "P was successfully created"
-    click_on "Back"
+    assert_text 'P was successfully created'
+    click_on 'Back'
   end
 
-  test "updating a P" do
+  test 'updating a P' do
     visit ps_url
-    click_on "Edit", match: :first
+    click_on 'Edit', match: :first
 
-    fill_in "Code", with: @p.code
-    fill_in "Description", with: @p.description
-    fill_in "Title", with: @p.title
-    click_on "Update P"
+    fill_in 'Code', with: @p.code
+    fill_in 'Description', with: @p.description
+    fill_in 'Title', with: @p.title
+    click_on 'Update P'
 
-    assert_text "P was successfully updated"
-    click_on "Back"
+    assert_text 'P was successfully updated'
+    click_on 'Back'
   end
 
-  test "destroying a P" do
+  test 'destroying a P' do
     visit ps_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on 'Destroy', match: :first
     end
 
-    assert_text "P was successfully destroyed"
+    assert_text 'P was successfully destroyed'
   end
 end

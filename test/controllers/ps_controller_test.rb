@@ -5,17 +5,17 @@ class PsControllerTest < ActionDispatch::IntegrationTest
     @p = ps(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get ps_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_p_url
     assert_response :success
   end
 
-  test "should create p" do
+  test 'should create p' do
     assert_difference('P.count') do
       post ps_url, params: { p: { code: @p.code, description: @p.description, title: @p.title } }
     end
@@ -23,22 +23,22 @@ class PsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to p_url(P.last)
   end
 
-  test "should show p" do
+  test 'should show p' do
     get p_url(@p)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_p_url(@p)
     assert_response :success
   end
 
-  test "should update p" do
+  test 'should update p' do
     patch p_url(@p), params: { p: { code: @p.code, description: @p.description, title: @p.title } }
     assert_redirected_to p_url(@p)
   end
 
-  test "should destroy p" do
+  test 'should destroy p' do
     assert_difference('P.count', -1) do
       delete p_url(@p)
     end

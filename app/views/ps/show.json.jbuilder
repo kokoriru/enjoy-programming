@@ -1,1 +1,1 @@
-json.partial! "ps/p", p: @p
+json.partial! 'ps/p', p: @p

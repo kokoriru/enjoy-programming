@@ -1,1 +1,1 @@
-json.array! @ps, partial: "ps/p", as: :p
+json.array! @ps, partial: 'ps/p', as: :p

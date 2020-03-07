@@ -1,5 +1,5 @@
 class PsController < ApplicationController
-  before_action :set_p, only: [:show, :edit, :update, :destroy]
+  before_action :set_p, only: %i[show edit update destroy]
 
   # GET /ps
   # GET /ps.json
@@ -9,8 +9,7 @@ class PsController < ApplicationController
 
   # GET /ps/1
   # GET /ps/1.json
-  def show
-  end
+  def show; end
 
   # GET /ps/new
   def new
@@ -18,8 +17,7 @@ class PsController < ApplicationController
   end
 
   # GET /ps/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /ps
   # POST /ps.json
@@ -62,13 +60,14 @@ class PsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_p
-      @p = P.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def p_params
-      params.require(:p).permit(:title, :code, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_p
+    @p = P.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def p_params
+    params.require(:p).permit(:title, :code, :description)
+  end
 end
