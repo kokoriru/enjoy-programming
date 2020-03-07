@@ -1,0 +1,71 @@
+require: rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.5.1
+
+  Exclude:
+    - bin/**/*
+    - db/schema.rb
+    - vendor/**/* # for CircleCI
+    - node_modules/**/*
+    - app/views/api/**/*
+
+  DisplayCopNames: true
+
+Rails:
+  Enabled: true
+
+Rails/EnumHash:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 128
+
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Guardfile'
+    - 'config/environments/*rb'
+    - 'config/routes.rb'
+    - 'db/migrate/*'
+    - 'spec/**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*'
+
+# For rubocop < 1.0.0
+Style/HashEachMethods:
+  Enabled: true
+
+# For rubocop < 1.0.0
+Style/HashTransformKeys:
+  Enabled: true
+
+# For rubocop < 1.0.0
+Style/HashTransformValues:
+  Enabled: true
