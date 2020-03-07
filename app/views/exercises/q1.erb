@@ -1,0 +1,17 @@
+<p><%= notice %></p>
+
+<div>
+  <p>2つの整数の積は偶数？奇数？</p>
+  <p>計算してみよう！</p>
+</div>
+
+<div class='p1'>
+  <%= form_with(url: exercises_q1_path, method: :get, local: true) do |f| %>
+    <%= f.number_field :a, value: @a %>×<%= f.number_field :b, value: @b %>
+    <%= f.submit '計算する' %>
+  <% end %>
+</div>
+
+<% if @product.present? %>
+  <p>答えは<%= @product %>で<%= @product.even? ? '偶数' : '奇数' %></p>
+<% end %>
