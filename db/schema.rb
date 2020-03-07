@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_06_154730) do
+ActiveRecord::Schema.define(version: 2020_03_07_142749) do
 
   create_table "ps", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_03_06_154730) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "official_url"
+    t.string "exercise_url"
   end
 
 end
